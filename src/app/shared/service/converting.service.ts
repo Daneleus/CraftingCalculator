@@ -20,6 +20,7 @@ export class ConvertingService {
 	}
 
 	craftItemRawToString(craftItemsRaw: CraftItemRaw): string {
+		if (!!craftItemsRaw.count && craftItemsRaw.count < 1) return "";
 		return craftItemsRaw.count + " " + craftItemsRaw.name;
 	}
 
