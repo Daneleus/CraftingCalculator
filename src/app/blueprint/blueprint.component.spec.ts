@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BlueprintComponent } from './blueprint.component';
-import {provideAnimations} from '@angular/platform-browser/animations';
+import { BlueprintComponent } from "./blueprint.component";
+import {provideAnimations} from "@angular/platform-browser/animations";
 
-describe('BlueprintComponent', () => {
+describe("BlueprintComponent", () => {
 	let component: BlueprintComponent;
 	let fixture: ComponentFixture<BlueprintComponent>;
 
@@ -19,7 +19,7 @@ describe('BlueprintComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });

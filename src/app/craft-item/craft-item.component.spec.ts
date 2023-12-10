@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { CraftItemComponent } from './craft-item.component';
-import {provideAnimations} from '@angular/platform-browser/animations';
+import { CraftItemComponent } from "./craft-item.component";
+import {provideAnimations} from "@angular/platform-browser/animations";
 
-describe('CraftItemComponent', () => {
+describe("CraftItemComponent", () => {
 	let component: CraftItemComponent;
 	let fixture: ComponentFixture<CraftItemComponent>;
 
@@ -19,7 +19,7 @@ describe('CraftItemComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
+	it("should create", () => {
 		expect(component).toBeTruthy();
 	});
 });

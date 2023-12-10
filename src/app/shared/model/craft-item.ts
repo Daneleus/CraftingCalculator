@@ -1,4 +1,4 @@
-import {Blueprint} from './blueprint';
+import {Blueprint} from "./blueprint";
 
 export interface CraftItem {
 	id:number;
