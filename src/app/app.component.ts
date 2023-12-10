@@ -12,5 +12,4 @@ import {BlueprintComponent} from "./blueprint/blueprint.component";
 	styleUrl: "./app.component.scss"
 })
 export class AppComponent {
-	title = "CraftingCalculator";
 }
