@@ -21,7 +21,7 @@ export class BlueprintComponent {
 	dataSource = new MatTableDataSource<Blueprint>();
 	constructor(private blueprintService: BlueprintService) {
 		this.dataSource = new MatTableDataSource<Blueprint>(blueprintService.initBlueprints());
-		this.displayedColumns = ["id", "name", "resources", "products"];
+		this.displayedColumns = ["name", "resources", "products"];
 	}
 
 	applyFilter(event: Event) {

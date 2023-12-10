@@ -1,33 +1,123 @@
 [
   {
-    "id": 1,
-    "name": "test",
-    "resources": [],
-    "products": []
+    "name": "Eisenbarren Schmelzofen",
+    "resources": [
+      {
+        "name": "Eisenerz",
+        "count": 1
+      }
+    ],
+    "products": [
+      {
+        "name": "Eisenbarren",
+        "count": 1
+      }
+    ]
   },
   {
-    "id": 2,
-    "name": "test",
-    "resources": [],
-    "products": []
+    "name": "Eisenplatte Konstruktor",
+    "resources": [
+      {
+        "name": "Eisenbarren",
+        "count": 3
+      }
+    ],
+    "products": [
+      {
+        "name": "Eisenplatte",
+        "count": 2
+      }
+    ]
   },
   {
-    "id": 3,
-    "name": "test",
-    "resources": [],
-    "products": []
+    "name": "Eisenstange Konstruktor",
+    "resources": [
+      {
+        "name": "Eisenbarren",
+        "count": 1
+      }
+    ],
+    "products": [
+      {
+        "name": "Eisenstange",
+        "count": 1
+      }
+    ]
   },
   {
-    "id": 4,
-    "name": "test",
-    "resources": [],
-    "products": []
+    "name": "Kupferbarren Schmelzofen",
+    "resources": [
+      {
+        "name": "Kupfererz",
+        "count": 1
+      }
+    ],
+    "products": [
+      {
+        "name": "Kupferbarren",
+        "count": 1
+      }
+    ]
   },
   {
-    "id": 5,
-    "name": "test",
-    "resources": [],
-    "products": []
+    "name": "Draht Konstruktor",
+    "resources": [
+      {
+        "name": "Kupferbarren",
+        "count": 1
+      }
+    ],
+    "products": [
+      {
+        "name": "Draht",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "name": "Kabel Konstruktor",
+    "resources": [
+      {
+        "name": "Draht",
+        "count": 2
+      }
+    ],
+    "products": [
+      {
+        "name": "Kabel",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Beton Konstruktor",
+    "resources": [
+      {
+        "name": "Kalkstein",
+        "count": 3
+      }
+    ],
+    "products": [
+      {
+        "name": "Beton",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "Schraube Konstruktor",
+    "resources": [
+      {
+        "name": "Eisenstange",
+        "count": 1
+      }
+    ],
+    "products": [
+      {
+        "name": "Schraube",
+        "count": 4
+      }
+    ]
   }
 ]
 
