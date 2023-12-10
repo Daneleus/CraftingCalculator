@@ -11,10 +11,11 @@ export class ConvertingService {
 	constructor() {
 	}
 
-	convertFromCraftItemRaw(craftItemsRaw: CraftItemRaw, blueprintsRaw: Array<BlueprintRaw>): CraftItem {
+	convertFromCraftItemRaw(craftItemsRaw: CraftItemRaw, blueprintsRawAsResource: Array<BlueprintRaw>, blueprintsRawAsProduct: Array<BlueprintRaw>): CraftItem {
 		return ({
 			name: craftItemsRaw.name,
-			blueprints: blueprintsRaw.map(blueprint => this.blueprintToString(blueprint)).join(", ")
+			resource: blueprintsRawAsResource.map(blueprint => this.blueprintToString(blueprint)).join(", "),
+			product: blueprintsRawAsProduct.map(blueprint => this.blueprintToString(blueprint)).join(", ")
 		} as CraftItem);
 	}
 

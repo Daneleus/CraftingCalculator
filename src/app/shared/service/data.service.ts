@@ -17,7 +17,7 @@ export class DataService {
 
 
 	initCraftItems(): Array<CraftItem> {
-		return craftItemsRaw.map(item => this.blueprintService.convertFromCraftItemRaw(item, this.getBlueprints(item)));
+		return craftItemsRaw.map(item => this.blueprintService.convertFromCraftItemRaw(item, this.getBlueprintsAsResource(item), this.getBlueprintsAsProduct(item)));
 	}
 
 	initBlueprints(): Array<Blueprint> {
@@ -28,11 +28,17 @@ export class DataService {
 		}));
 	}
 
-	getBlueprints(craftItem: CraftItemRaw): Array<BlueprintRaw> {
+	getBlueprintsAsResource(craftItem: CraftItemRaw): Array<BlueprintRaw> {
+		return (blueprintsRaw as Array<BlueprintRaw>)
+			.filter(blueprint =>
+				blueprint.resources.map(product => product.name).includes(craftItem.name)
+			);
+	}
+
+	getBlueprintsAsProduct(craftItem: CraftItemRaw): Array<BlueprintRaw> {
 		return (blueprintsRaw as Array<BlueprintRaw>)
 			.filter(blueprint =>
 				blueprint.products.map(product => product.name).includes(craftItem.name)
-        || blueprint.resources.map(product => product.name).includes(craftItem.name)
 			);
 	}
 

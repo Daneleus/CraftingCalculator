@@ -22,7 +22,7 @@ export class CraftItemComponent {
 
 	constructor(private dataService: DataService) {
 		this.dataSource = new MatTableDataSource<CraftItem>(dataService.initCraftItems());
-		this.displayedColumns = ["name", "blueprints"];
+		this.displayedColumns = ["name", "resource", "product"];
 	}
 
 	applyFilter(event: Event) {

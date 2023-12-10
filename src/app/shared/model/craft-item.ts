@@ -1,6 +1,7 @@
 
 export interface CraftItem {
 	name:string;
-  blueprints:string;
+  resource:string;
+  product:string;
 
 }
