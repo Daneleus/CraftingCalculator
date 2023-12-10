@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CraftItemComponent } from './craft-item.component';
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 describe('CraftItemComponent', () => {
 	let component: CraftItemComponent;
@@ -8,7 +9,8 @@ describe('CraftItemComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [CraftItemComponent]
+			imports: [CraftItemComponent],
+			providers: provideAnimations()
 		})
 			.compileComponents();
 
