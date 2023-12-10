@@ -1,9 +1,9 @@
-import { Component } from "@angular/core";
+import {Component} from "@angular/core";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
-import {BlueprintService} from "../shared/service/blueprint.service";
 import {Blueprint} from "../shared/model/blueprint";
+import {DataService} from "../shared/service/data.service";
 
 @Component({
 	selector: "app-blueprint",
@@ -19,8 +19,8 @@ import {Blueprint} from "../shared/model/blueprint";
 export class BlueprintComponent {
 	displayedColumns: string[] = [];
 	dataSource = new MatTableDataSource<Blueprint>();
-	constructor(private blueprintService: BlueprintService) {
-		this.dataSource = new MatTableDataSource<Blueprint>(blueprintService.initBlueprints());
+	constructor(private dataService: DataService) {
+		this.dataSource = new MatTableDataSource<Blueprint>(dataService.initBlueprints());
 		this.displayedColumns = ["name", "resources", "products"];
 	}
 

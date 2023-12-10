@@ -3,7 +3,7 @@ import {MatTableDataSource, MatTableModule} from "@angular/material/table";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {CraftItem} from "../shared/model/craft-item";
-import {CraftItemService} from "../shared/service/craft-item.service";
+import {DataService} from "../shared/service/data.service";
 
 @Component({
 	selector: "app-craft-item",
@@ -20,9 +20,9 @@ export class CraftItemComponent {
 	displayedColumns: string[] = [];
 	dataSource = new MatTableDataSource<CraftItem>();
 
-	constructor(private craftItemService: CraftItemService) {
-		this.dataSource = new MatTableDataSource<CraftItem>(craftItemService.initCraftItems());
-		this.displayedColumns = ["name", "count", "blueprints"];
+	constructor(private dataService: DataService) {
+		this.dataSource = new MatTableDataSource<CraftItem>(dataService.initCraftItems());
+		this.displayedColumns = ["name", "blueprints"];
 	}
 
 	applyFilter(event: Event) {

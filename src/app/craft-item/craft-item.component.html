@@ -10,14 +10,9 @@
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="count">
-    <th mat-header-cell *matHeaderCellDef> Count </th>
-    <td mat-cell *matCellDef="let element"> {{element.count}} </td>
-  </ng-container>
-
   <ng-container matColumnDef="blueprints">
     <th mat-header-cell *matHeaderCellDef> Blueprints </th>
-    <td mat-cell *matCellDef="let element"> {{0}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.blueprints}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

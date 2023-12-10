@@ -1,13 +1,13 @@
-import { TestBed } from "@angular/core/testing";
+import {TestBed} from "@angular/core/testing";
 
-import { CraftItemService } from "./craft-item.service";
+import {DataService} from "./data.service";
 
 describe("CraftItemService", () => {
-	let service: CraftItemService;
+	let service: DataService;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({});
-		service = TestBed.inject(CraftItemService);
+		service = TestBed.inject(DataService);
 	});
 
 	it("should be created", () => {

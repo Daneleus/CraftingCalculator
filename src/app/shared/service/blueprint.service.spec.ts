@@ -1,13 +1,13 @@
-import { TestBed } from "@angular/core/testing";
+import {TestBed} from "@angular/core/testing";
 
-import { BlueprintService } from "./blueprint.service";
+import {ConvertingService} from "./converting.service";
 
 describe("BlueprintService", () => {
-	let service: BlueprintService;
+	let service: ConvertingService;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({});
-		service = TestBed.inject(BlueprintService);
+		service = TestBed.inject(ConvertingService);
 	});
 
 	it("should be created", () => {
