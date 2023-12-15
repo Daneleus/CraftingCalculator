@@ -1,8 +1,18 @@
 <div class = "body">
   <h1>Crafting-Calculator</h1>
+  <div class = "button-list">
+    <button mat-raised-button>Nothing1</button>
+    <button mat-raised-button color = "primary">Filter</button>
+    <button mat-raised-button color = "accent">Nothing2</button>
+    <button mat-raised-button color = "warn">Nothing3</button>
+  </div>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup) = "applyFilter($event)" placeholder = "Filter">
+  </mat-form-field>
   <h2>Craft-Items</h2>
-  <app-craft-item></app-craft-item>
+  <app-craft-item [dataSource] = "dataSourceCraftItems"></app-craft-item>
   <h2>Blueprints</h2>
-  <app-blueprint></app-blueprint>
+  <app-blueprint [dataSource] = "dataSourceBlueprints"></app-blueprint>
   <router-outlet></router-outlet>
 </div>
