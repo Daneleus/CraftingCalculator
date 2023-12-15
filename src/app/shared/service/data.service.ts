@@ -12,19 +12,19 @@ import {BlueprintRaw} from "../model/blueprint-raw";
 })
 export class DataService {
 
-	constructor(private blueprintService: ConvertingService) {
+	constructor(private convertingService: ConvertingService) {
 	}
 
 
 	initCraftItems(): Array<CraftItem> {
-		return craftItemsRaw.map(item => this.blueprintService.convertFromCraftItemRaw(item, this.getBlueprintsAsResource(item), this.getBlueprintsAsProduct(item)));
+		return craftItemsRaw.map(item => this.convertingService.convertFromCraftItemRaw(item, this.getBlueprintsAsResource(item), this.getBlueprintsAsProduct(item)));
 	}
 
 	initBlueprints(): Array<Blueprint> {
 		return blueprintsRaw.map(blueprint => ({
 			name: blueprint.name,
-			resources: blueprint.resources.map(item => this.blueprintService.craftItemRawToString(item)).join(", "),
-			products: blueprint.products.map(item => this.blueprintService.craftItemRawToString(item)).join(", ")
+			resources: blueprint.resources.map(item => this.convertingService.craftItemRawToString(item)).join(", "),
+			products: blueprint.products.map(item => this.convertingService.craftItemRawToString(item)).join(", ")
 		}));
 	}
 
